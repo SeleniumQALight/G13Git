@@ -1,0 +1,63 @@
+package org.cw_4_classes_objects_static_non_static.cw.rooms;
+
+import org.cw_4_classes_objects_static_non_static.cw.constants.GeneralTimeConstants;
+import org.cw_4_classes_objects_static_non_static.cw.utils.PrintToConsole;
+
+import static org.cw_4_classes_objects_static_non_static.cw.constants.GeneralTimeConstants.TIME_FOR_MOP;
+import static org.cw_4_classes_objects_static_non_static.cw.constants.GeneralTimeConstants.TIME_FOR_VACUUM_CLEANER;
+
+public class Room {
+    protected String nameOfRoom;
+    private double width, length;
+
+    protected int numberOfWindows, numberOfFurniture;
+    private double areaOfRoom ;
+
+//    public Room(){
+//    }
+
+    public Room(double width, double length) {
+        this.nameOfRoom = "Default room";
+        this.width = width;
+        this.numberOfWindows = 1;cvcvxcv
+        this.length = length;
+        this.numberOfFurniture = 0;
+        this.areaOfRoom = width * length;
+    }
+
+    public Room(String nameOfRoom, double width, double length, int numberOfWindows, int numberOfFurniture) {
+        this.nameOfRoom = nameOfRoom;
+        this.width = width;
+        this.length = length;
+        this.numberOfWindows = numberOfWindows;
+        this.numberOfFurniture = numberOfFurniture;
+        areaOfRoom = width * length;
+    }
+
+    public double getAreaOfRoom() {
+        return areaOfRoom;
+    }
+
+    public void printArea(){
+        System.out.println("Area of " + nameOfRoom + " is " + areaOfRoom);
+    }
+
+    public double timeForVacuumCleaningAndMop(){
+        double tempTime = this.areaOfRoom * (TIME_FOR_VACUUM_CLEANER + TIME_FOR_MOP);
+        System.out.println("Time for vacuum cleaning and mop is " + tempTime);
+        return tempTime;
+    }
+
+    public double totalTimeForCleaning(){
+        double totalTime = this.numberOfWindows * GeneralTimeConstants.TIME_FOR_CLEANING_WINDOW
+                + this.numberOfFurniture * GeneralTimeConstants.TIME_FOR_WIPE_THE_DUST
+                + timeForVacuumCleaningAndMop();
+//        System.out.println("Total Time = " + totalTime);
+        PrintToConsole.printToConsole("Total Time = " + totalTime);
+        return totalTime;
+    }
+
+
+
+
+}
