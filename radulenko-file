@@ -12,7 +12,7 @@ public class Room {
 
     protected int numberOfWindows, numberOfFurniture;
     private double areaOfRoom ;
-
+dfgg
 //    public Room(){
 //    }
 
