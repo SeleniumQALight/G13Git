@@ -16,7 +16,7 @@ dfgg
 //    public Room(){
 //    }
 
-    public Room(double width, double length) {
+    public RoomUser1(double width, double length) {
         this.nameOfRoom = "Default room";
         this.width = width;
         this.numberOfWindows = 1;cvcvxcv
@@ -25,13 +25,17 @@ dfgg
         this.areaOfRoom = width * length;
     }
 
-    public Room(String nameOfRoom, double width, double length, int numberOfWindows, int numberOfFurniture) {
+    public RoomUser1(Integer nameOfRoom, double width, double length, int numberOfWindows, int numberOfFurniture) {
         this.nameOfRoom = nameOfRoom;
         this.width = width;
         this.length = length;
         this.numberOfWindows = numberOfWindows;
         this.numberOfFurniture = numberOfFurniture;
         areaOfRoom = width * length;
+    }
+
+    public double getAreaOfRoom111() {
+        return areaOfRoom;
     }
 
     public double getAreaOfRoom() {
